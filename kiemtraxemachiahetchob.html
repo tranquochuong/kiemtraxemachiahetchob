@@ -7,32 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <th><label for="Amount">a</label></th>
-    <tr><input type="number" id="a" name="" >
-    <th><label for="Amount">b</label></th> 
-    <input type="number" id="b" name=""  >
-   </tr>
-   <tr><button onclick="Kiem_tra()">Kiểm tra</button></tr>
-    
+    <input type="number" id="num1" placeholder="Nhập a">
+    <input type="number" id="num2" placeholder="Nhập b"> 
+    <button onclick="Div()">chia</button>
+    <h3>Result:</h3>
     <p id="result"></p>
-    <script>
-        function Kiem_tra(){
-            
-        let a = document.getElementById("a"). value;
-        let b = document.getElementById("b"). value;
-        let mod = (a % b);
-        if(a % b == 0 ){
-            document.write(mod +" "+ "a chia het cho b")
-
-        }
-        else
-        document.write(mod +" "+ "a không chia hết cho b") 
-
-}
-        
- 
-    </script>
 </body>
+<script>
+    function Div(){
+        let a= document.getElementById("num1").value; 
+        let b= document.getElementById("num2").value; 
+        let result = (a % b);
+        if(result == 0){
+            document.getElementById("result").innerHTML= "dư" + result + "a chia hết cho b";
+        } 
+        else{
+            document.getElementById("result").innerHTML= "dư" + result + "a không chia hết cho b";
+        }
+       }
+</script>
 </html>
-
-
