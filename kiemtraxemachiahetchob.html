@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <th><label for="Amount">a</label></th>
+    <tr><input type="number" id="a" name="" >
+    <th><label for="Amount">b</label></th> 
+    <input type="number" id="b" name=""  >
+   </tr>
+   <tr><button onclick="Kiem_tra()">Kiểm tra</button></tr>
+    
+    <p id="result"></p>
+    <script>
+        function Kiem_tra(){
+            
+        let a = document.getElementById("a"). value;
+        let b = document.getElementById("b"). value;
+        let mod = (a % b);
+        if(a % b == 0 ){
+            document.write(mod +" "+ "a chia het cho b")
+
+        }
+        else
+        document.write(mod +" "+ "a không chia hết cho b") 
+
+}
+        
+ 
+    </script>
+</body>
+</html>
+
+
